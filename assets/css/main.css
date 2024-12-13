@@ -38,6 +38,98 @@
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 15px;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 500px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  padding: 30px 25px;
+  margin: 0 auto;
+  border: 1px solid #e1e6eb;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 576px) {
+  .form-container {
+      padding: 20px 15px;
+      margin-top: 0;
+      box-shadow: none;
+      border: none;
+      background-color: transparent;
+  }
+  
+  body {
+      background-color: white;
+  }
+  
+  .form-control {
+      font-size: 16px; /* Prevent zoom on input focus */
+  }
+  
+  .form-header {
+      margin-bottom: 20px;
+  }
+}
+
+.form-header {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #34495e;
+}
+
+.form-control {
+  border-radius: 8px;
+  padding: 12px 15px;
+  border-color: #bdc3c7;
+}
+
+.btn-submit {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 0.85em;
+  margin-top: 5px;
+  display: none;
+}
+
+/* Touch-friendly adjustments */
+input, button {
+  touch-action: manipulation;
+}
+
+/* Prevent auto zoom on input focus for iOS */
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+  select,
+  textarea,
+  input {
+      font-size: 16px;
+  }
+}
 
 .light-background {
   --background-color: #1a1a1a;
