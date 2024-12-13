@@ -155,8 +155,7 @@ require_once "databaseConnaction.php";
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="index.html" class="active">Home<br></a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="index.php" class="active">Home<br></a></li>
                     <li><a href="addCity.php">ADD COUNTRY</a></li>
                     <li><a href="addCity.php">ADD City</a></li>
                     <li class="dropdown"><a href="addCity.php"><span>ADD country OR city</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>

@@ -1,5 +1,5 @@
 <?php
-include("databaseConnaction.php");
+require_once "databaseConnaction.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -57,7 +57,7 @@ include("databaseConnaction.php");
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="index.html" class="active">Home<br></a></li>
+                    <li><a href="index.php" class="active">Home<br></a></li>
                     <li class="dropdown"><a href="#"><span>ADD country OR city</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
                             <li><a href="addCountry.php">ADD COUNTRY</a></li>
@@ -83,18 +83,18 @@ include("databaseConnaction.php");
 
     <div class="container">
         <h2 class="mt-5">Add a New Country</h2>
-        <form action="add_country.php" method="POST" class="mt-4">
+        <form action="insert_country.php" method="POST" class="mt-4">
             <div class="mb-3">
-                <label for="nom" class="form-label">Nom (Country Name)</label>
-                <input type="text" class="form-control" id="nom" name="nom" required>
+                <label for="CountryName" class="form-label">Nom (Country Name)</label>
+                <input type="text" class="form-control" id="nom" name="CountryName" required>
             </div>
             <div class="mb-3">
-                <label for="population" class="form-label">Population</label>
-                <input type="number" class="form-control" id="population" name="population" required>
+                <label for="CountryPopulation" class="form-label">Population</label>
+                <input type="number" class="form-control" id="population" name="CountryPopulation" required>
             </div>
             <div class="mb-3">
-                <label for="langue" class="form-label">Language</label>
-                <input type="text" class="form-control" id="langue" name="langue" required>
+                <label for="Language" class="form-label">Language</label>
+                <input type="text" class="form-control" id="langue" name="Language" required>
             </div>
             <button type="submit" class="btn btn-primary">Add Country</button>
         </form>
